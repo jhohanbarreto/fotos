@@ -1,0 +1,38 @@
+[
+    {
+        "idvengador":"23",
+        "foto":"avengers/capitan-america.jpg",
+        "titulo":"Capitán América",
+        "personaje":"Steve Rogers"
+    },
+    {
+        "idvengador":"45",
+        "foto":"avengers/black-widow.jpg",
+        "titulo":"Viuda Negra",
+        "personaje":"Natasha Romanoff"
+    },
+    {
+        "idvengador":"51",
+        "foto":"avengers/hawkeye.jpg",
+        "titulo":"Ojo de Halcón",
+        "personaje":"Clint Barton"
+    },
+    {
+        "idvengador":"67",
+        "foto":"avengers/hulk.jpg",
+        "titulo":"Hulk",
+        "personaje":"Bruce Banner"
+    },
+    {
+        "idvengador":"77",
+        "foto":"avengers/iron-man.jpg",
+        "titulo":"Ironman",
+        "personaje":"Tony Stark"
+    },
+    {
+        "idvengador":"81",
+        "foto":"avengers/thor.jpg",
+        "titulo":"Thor",
+        "personaje":"Hijo de Odin"
+    }
+]

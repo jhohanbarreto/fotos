@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,400,700,900&display=swap');
+/* Asi se invoca a determinadas fuentes y estilos de Google Fonts */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
+/* Asi se invoca a las fuentes de iconos de Font Awesome */
+
+
+body{/* Asi se define una regla para un objeto o varios por su etiqueta (tag) */
+    margin:0;/* Se elimina el margen por defecto que tiene el objeto body */
+    font-family: Raleway, Arial, sans-serif;/* Tipo de fuente */
+    font-size: 16px;/* Tamaño del texto */ 
+}
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+}
+h1{
+    font-weight: 900;/* Se indica el estilo de la fuente a usar */
+    font-size: 48px;
+    letter-spacing: -3px;/* Espacio entre letra y letra */
+}
+h2{
+    font-weight: 100;
+    font-size: 48px;
+    margin-bottom: 36px;
+    text-transform: lowercase;/* Muestra en minúsculas */
+    letter-spacing: -3px;
+}
+h3{
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;/* Muestra en mayúsculas */
+}
+
+p{
+    margin-top: 0;/* Se eliminó el margen superior por defecto del párrafo */
+    margin-bottom: 24px;
+    line-height: 22px;/* Alto de línea o interlineado */
+}
+img{
+    display: block;/* en el caso de los img elimina el espacio inferior que aparece por defecto */
+}
+figure{
+    margin:0;/* Anula el margen por defecto de los objetos figure*/
+}
+a{/* Hipervinculos */
+    color:#ff0000;
+    text-decoration: none;/* Elimina el subrayado por defecto de los hipervínculos */
+}
+a:hover{/* Estado que ocurre al pasar el puntero del mouse sobre el objeto */
+    color:goldenrod;
+    text-decoration: underline;
+}
+
+#top-nav{/* Asi se define una regla para un objeto por su id (inicia con #) */
+    background-color: #008AE5; /* Color de fondo */
+    color: #ffffff; /* Color de texto */
+    /* padding: 15px; Distancia entre el borde y el contenido */
+}
+.container{/* Asi se define una regla para un objeto o varios por su clase
+    (inicia con .) */
+    max-width: 1200px;
+    /* Esto es el ancho máximo */
+
+    margin-left: auto;
+    margin-right: auto;
+    /* Es para que ambos margenes sean automáticos e iguales por tanto el contenido
+    se verá centrado */
+
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#main-header{
+    background-color: #ffffff;
+    position: sticky;/* para que el objeto se quede pegado en la posición definida por la propiedad top */
+    top:0;/* Top es la distancia del borde superior del objeto al borde superior de la ventana */
+    z-index: 1000;/* controla el orden de profundidad de los objetos */
+}
+#logo-text{
+    display: flex;
+    align-items: center;/* Con las dos propiedades se centra verticalmente */
+}
+#logo-text a{
+    color: #999999;
+}
+#logo-text a:hover{
+    color: #999999;
+    text-decoration: none;
+}
+
+#main-banner{
+    position: relative;/* Para que los objetos contenidos con position 
+    absolute lo tomen a este como referencia */
+}
+#main-banner figcaption{
+    position: absolute;/* Para que este flotando y quede fijo respecto a su contenedor */
+    bottom:0;
+    right:0;
+    width: 40%;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #FF0073;
+    color:#ffffff;
+    border-radius: 30px 0 0 0;    
+}
+
+#mensaje{
+    background-color: #F7931E;
+}
+#noticias{
+    background-color: #dddddd;
+}
+#aviso{
+    background-image: url('../images/concierto.jpg');/* Imagen de fondo */
+    /* ../ es para salir de una carpeta  */
+    color:#ffffff;
+    background-size: cover; /* para que el contenedor de la imagen de fondo siempre muestre la imagen
+    completamente a lo ancho o a lo alto cubriendo siempre el contenedor */
+    background-position: right center;/* Alineamiento de la imagen de fondo (Horizontal/Vertical) */
+    background-attachment: fixed;/* Para que la imagen quede fija con respecto al navegador */
+}
+#aviso h2{/* El espacio significa dentro de */
+    text-transform: uppercase;
+}
+#eventos{
+    background-color: #eeeeee;
+}
+#empresa{
+    background-color: #FF0073;
+    color:#ffffff;
+}
+.row{
+    display: flex;/* por defecto pone a los objetos que contiene uno al costado
+    del otro es decir en fila */
+    margin-left: -100px;
+    margin-right: -100px;
+    flex-wrap: wrap;/* Si el ancho del contenido desborda al contenedor, se pase
+    a la siguiente fila */
+}
+.col{
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-basis: 0;/* Se define el tamaño inicial (mínimo) */
+    flex-grow: 1;/* Para que los 3 objetos crezcan de igual ancho */
+    box-sizing: border-box;/* para que el padding no incremente el ancho */
+}
+.col-50{
+    flex-basis: 50%;
+    max-width: 50%;
+}
+.padded{
+    padding-top: 90px;
+    padding-bottom: 60px;
+}
+.img-fluid{
+    width: 100%;/* Asi se indica que el ancho del objeto sea igual al de su contenedor */
+}
+.centrado-vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.texto-importante{
+    font-weight: 900;
+    color: #FFF022;
+}
+/* M E N U  **********/
+.menu{
+    list-style: none; /* Elimina las viñetas */
+    margin:0;/* Elimina el margen por defecto de la lista */
+    padding-left: 0; /* Elimina el padding izquierdo por defecto de la lista */
+    display: flex;
+}
+.menu li a:hover{
+    text-decoration: none;
+}
+.menu-top li a{
+    padding: 10px 15px;/* arriba y abajo / izquierda y derecha  */
+    display: block;/* Para que se muestre como estilo de bloque y considere los padding (sup/inf) */
+    color:#dddddd;
+    font-size: 14px;
+}
+.menu-top li a:hover{
+    background-color: #0DCCFF;
+    color:#eeeeee;
+}
+.menu-main li a{
+    display: block;
+    padding: 30px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #555555;
+    border-bottom: solid 3px transparent;
+}
+.menu-main li a:hover{
+    color: #FF0073;
+    border-bottom: solid 3px #FF0073;/* borde inferior: estilo grosor color */
+}
+.row-expand{
+    justify-content: space-between;/* Para que los elementos contenidos dentro del objeto,
+     se separen entre ellos*/
+}
+.col-figura{
+    flex-basis: 16.66%;
+    max-width: 16.66%;
+}
+#irarriba{
+    font-size: 32px;
+    padding: 24px 29px;
+    background-color:#FFF022 ;
+    position: fixed;/* Esto es para que el objeto quede fijo respecto a la ventana del navegador */
+    bottom: 20px;/* Distancia del borde inferior del objeto respecto al borde inferior de la ventana */
+    right: 20px;;/* Distancia del borde derecho del objeto respecto al borde derecho de la ventana */
+    border-radius: 50%;
+    z-index: 1100;
+    display: none;
+}
+#main-footer{
+    background-color: #333333;
+    color: #eeeeee;
+    padding: 30px 0 15px 0; /* arriba derecha abajo izquierda */
+}
+/**********************************************/
+#galeria figure{
+    position: relative;
+}
+#galeria figure figcaption{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    top:0;
+    display: none;
+    color:#ffffff;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#galeria figure figcaption i{
+    margin-bottom: 100px;
+    font-size: 100px;
+    cursor: pointer;
+}
+#fondo-oscuro{
+    position: fixed;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index: 5000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#fondo-oscuro img{
+    border:solid 5px #cccccc;
+    border-radius:10px;
+}
+
+.nombre-foto{
+    border-radius:50px;
+    padding: 15px 30px;
+    min-width: 200px;
+    background-color: #ffffff;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 15px;
+}
+.contenedor-foto{
+    position: relative;
+}
+#fondo-oscuro i{
+    cursor: pointer;
+    right: -15px;
+    top: -15px;
+    background-color: #cccccc;
+    padding: 15px;
+    position: absolute;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;;
+}
+.table th{
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+}
+.table th,
+.table td{
+    padding: 10px;;
+}
+.table td{
+    border-bottom: solid 1px #cccccc;
+}
+.img-circulo{
+    border-radius: 50%;
+}
+.fila-seleccionada{
+    background-color: #ffcc00;
+}
